@@ -1,0 +1,57 @@
+name: Fix Poojan Paradise pricing
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pricing:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update verified benchmark prices
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/main.jsx')
+          s=p.read_text()
+          replacements={
+            "['Peela Kapda','₹14'":"['Peela Kapda','₹75'",
+            "['Lal Kapda','₹14'":"['Lal Kapda','₹53'",
+            "['Pooja Ghee','₹73'":"['Pooja Ghee','₹76'",
+            "['Gobar Cups & Diya','₹34'":"['Gobar Cups & Diya','₹95'",
+            "['Bheem Seni Kapoor','₹74'":"['Bheem Seni Kapoor','₹261'",
+            "['Honey','₹44'":"['Honey','₹66'",
+            "['Dhoop','₹18'":"['Dhoop','₹44'",
+            "['Perfume / Itra','₹44'":"['Perfume / Itra','₹44'",
+            "['Mauli Kalava','₹14'":"['Mauli Kalava','₹15'",
+            "['Cow Ghee Batti','₹74'":"['Cow Ghee Batti','₹95'",
+            "['Chameli Pooja Oil','₹34'":"['Chameli Pooja Oil','₹55'",
+            "['Tika Chandan','₹24'":"['Tika Chandan','₹29'",
+            "['Hawan Samagri','₹54'":"['Hawan Samagri','₹45'",
+            "['Orange Sindoor','₹14'":"['Orange Sindoor','₹35'",
+            "['Lal Sindoor','₹14'":"['Lal Sindoor','₹35'",
+            "['Haldi Sabut','₹24'":"['Haldi Sabut','₹24'",
+            "['Gomti Chakra','₹44'":"['Gomti Chakra','₹75'",
+            "['Kamal Gatta Mala / Loose','₹54'":"['Kamal Gatta Mala / Loose','₹45'",
+            "['Pooja Ghee':[['100 ml','₹73'],['200 ml','₹121'],['500 ml','₹175'],['1 L','₹345']]":"['Pooja Ghee':[['100 ml','₹76'],['200 ml','₹76'],['500 ml','₹176'],['1 L','₹365']]",
+            "'Honey':[['100 g','₹44'],['250 g','₹95'],['500 g','₹175'],['1 kg','₹295']]":"'Honey':[['100 g','₹66'],['250 g','₹115'],['500 g','₹198'],['1 kg','₹316']]",
+            "'Dhoop':[['20 pcs','₹8'],['40 pcs','₹18'],['80 pcs','₹38']]":"'Dhoop':[['20 pcs','₹20'],['40 pcs','₹44'],['80 pcs','₹40']]",
+            "'Chameli Pooja Oil':[['50 ml','₹34'],['100 ml','₹65'],['200 ml','₹125']]":"'Chameli Pooja Oil':[['50 ml','₹55'],['100 ml','₹85'],['200 ml','₹125']]",
+            "'Haldi Sabut':[['50 g','₹14'],['100 g','₹24'],['250 g','₹55'],['500 g','₹105']]":"'Haldi Sabut':[['50 g','₹14'],['100 g','₹24'],['250 g','₹55'],['500 g','₹105']]",
+            "'Hawan Samagri':[['100 g','₹34'],['200 g','₹54'],['500 g','₹125'],['1 kg','₹225']]":"'Hawan Samagri':[['100 g','₹34'],['200 g','₹45'],['500 g','₹123'],['1 kg','₹115']]",
+            "'Guggal':[['50 g','₹31'],['100 g','₹54'],['250 g','₹125'],['500 g','₹235']]":"'Guggal':[['50 g','₹31'],['100 g','₹54'],['250 g','₹125'],['500 g','₹235']]",
+            "'Loban':[['50 g','₹25'],['100 g','₹44'],['250 g','₹105'],['500 g','₹195']]":"'Loban':[['50 g','₹25'],['100 g','₹44'],['250 g','₹105'],['500 g','₹195']]",
+          }
+          for a,b in replacements.items(): s=s.replace(a,b)
+          p.write_text(s)
+          PY
+      - name: Commit pricing update
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/main.jsx
+          git diff --cached --quiet || git commit -m 'Update product prices using verified benchmarks'
+          git push
