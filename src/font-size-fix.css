@@ -1,47 +1,47 @@
-/* Global readability upgrade - Poojan Paradise */
-body{font-size:16px}
-.topbar{font-size:11px!important}
-nav a{font-size:14px!important}
-.trust-strip span{font-size:12px!important}
-.trust-strip strong{font-size:14px!important}
-.category b{font-size:13px!important}
-.orn-title h2{font-size:29px!important}
-.product-info h3{font-size:14px!important;line-height:1.35!important}
-.product-info strong{font-size:18px!important}
-.add{font-size:12px!important;height:36px!important}
-.net-quantity{font-size:12px!important}
-.variant-picker label{font-size:11px!important}
-.variant-options button{font-size:11px!important}
-.kit-content p{font-size:13px!important;line-height:1.5!important}
-.kit-points{font-size:12px!important}
-.why-grid strong{font-size:12px!important}
-.footer-brand~div a,.footer-brand~div p,.footer-brand~div small{font-size:12px!important}
-.copyright{font-size:11px!important}
-.pp-about .pp-about-kicker{font-size:14px!important}
-.pp-about p{font-size:17px!important}
-.pp-about-card h3{font-size:23px!important}
-.pp-about-card strong{font-size:16px!important}
-.pp-about-closing strong{font-size:19px!important}
+/* Global readability upgrade - Poojan Paradise - 25% larger fonts */
+body{font-size:20px}
+.topbar{font-size:14px!important}
+nav a{font-size:17.5px!important}
+.trust-strip span{font-size:15px!important}
+.trust-strip strong{font-size:17.5px!important}
+.category b{font-size:16.25px!important}
+.orn-title h2{font-size:36.25px!important}
+.product-info h3{font-size:17.5px!important;line-height:1.35!important}
+.product-info strong{font-size:22.5px!important}
+.add{font-size:15px!important;height:36px!important}
+.net-quantity{font-size:15px!important}
+.variant-picker label{font-size:13.75px!important}
+.variant-options button{font-size:13.75px!important}
+.kit-content p{font-size:16.25px!important;line-height:1.5!important}
+.kit-points{font-size:15px!important}
+.why-grid strong{font-size:15px!important}
+.footer-brand~div a,.footer-brand~div p,.footer-brand~div small{font-size:15px!important}
+.copyright{font-size:13.75px!important}
+.pp-about .pp-about-kicker{font-size:17.5px!important}
+.pp-about p{font-size:21.25px!important}
+.pp-about-card h3{font-size:28.75px!important}
+.pp-about-card strong{font-size:20px!important}
+.pp-about-closing strong{font-size:23.75px!important}
 @media(max-width:700px){
-  .topbar{font-size:9px!important}
-  .trust-strip span{font-size:11px!important}
-  .trust-strip strong{font-size:13px!important}
-  .orn-title h2{font-size:23px!important}
-  .category b{font-size:11px!important}
+  .topbar{font-size:11.25px!important}
+  .trust-strip span{font-size:13.75px!important}
+  .trust-strip strong{font-size:16.25px!important}
+  .orn-title h2{font-size:28.75px!important}
+  .category b{font-size:13.75px!important}
   .product-info{padding:11px 10px 13px!important}
-  .product-info h3{font-size:13px!important;line-height:1.35!important}
-  .product-info strong{font-size:17px!important}
-  .add{font-size:12px!important;height:34px!important}
-  .variant-picker label{font-size:10px!important}
-  .variant-options button{font-size:10px!important}
-  .kit-content p{font-size:13px!important}
-  .kit-points{font-size:11px!important}
-  .why-grid strong{font-size:11px!important}
-  .pp-about p{font-size:16px!important;line-height:1.75!important}
-  .pp-about-card h3{font-size:21px!important}
+  .product-info h3{font-size:16.25px!important;line-height:1.35!important}
+  .product-info strong{font-size:21.25px!important}
+  .add{font-size:15px!important;height:34px!important}
+  .variant-picker label{font-size:12.5px!important}
+  .variant-options button{font-size:12.5px!important}
+  .kit-content p{font-size:16.25px!important}
+  .kit-points{font-size:13.75px!important}
+  .why-grid strong{font-size:13.75px!important}
+  .pp-about p{font-size:20px!important;line-height:1.75!important}
+  .pp-about-card h3{font-size:26.25px!important}
 }
 @media(max-width:420px){
-  .product-info h3{font-size:14px!important}
-  .product-info strong{font-size:18px!important}
-  .add{font-size:12px!important}
+  .product-info h3{font-size:17.5px!important}
+  .product-info strong{font-size:22.5px!important}
+  .add{font-size:15px!important}
 }
