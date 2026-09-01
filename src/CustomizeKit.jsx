@@ -1,43 +1,47 @@
 import React, { useMemo, useState } from 'react';
 
+// Premium 15-item Poojan Paradise kit.
+// Default quantities are arranged to total exactly ₹1,299.
 const ITEMS = [
-  ['Peela Kapda', 75],
-  ['Lal Kapda', 53],
-  ['Pooja Ghee', 76],
-  ['Gobar Cups & Diya', 95],
   ['Bheem Seni Kapoor', 261],
-  ['Honey', 66],
-  ['Dhoop', 44],
-  ['Perfume / Itra', 44],
-  ['Mauli Kalava', 15],
+  ['Dhoop Batti', 44],
+  ['Hawan Samagri', 45],
+  ['Pooja Ghee', 76],
   ['Cow Ghee Batti', 95],
   ['Chameli Pooja Oil', 55],
-  ['Tika Chandan', 29],
-  ['Hawan Samagri', 45],
-  ['Orange Sindoor', 35],
-  ['Lal Sindoor', 35],
-  ['Nav Grah Poojan', 94],
-  ['Haldi Sabut', 24],
-  ['Peeli Kaudi', 95],
-  ['Gomti Chakra', 75],
-  ['Janaeu', 45],
+  ['Perfume / Itra', 44],
+  ['Lal Kapda', 53],
+  ['Peela Kapda', 75],
+  ['Mauli Kalava', 15],
   ['Guggal', 54],
   ['Loban', 44],
-  ['Rudraksh Mala', 225],
-  ['Kamal Gatta Mala / Loose', 45],
-  ['Chandan Stick & Rubbing Stone', 39]
+  ['Orange Sindoor', 35],
+  ['Haldi Sabut', 24],
+  ['Rudraksh Mala', 225]
 ];
 
 const PRICE = 1299;
 
+const DEFAULT_QTY = {
+  'Bheem Seni Kapoor': 1,
+  'Dhoop Batti': 1,
+  'Hawan Samagri': 1,
+  'Pooja Ghee': 1,
+  'Cow Ghee Batti': 1,
+  'Chameli Pooja Oil': 1,
+  'Perfume / Itra': 1,
+  'Lal Kapda': 1,
+  'Peela Kapda': 1,
+  'Mauli Kalava': 2,
+  'Guggal': 1,
+  'Loban': 1,
+  'Orange Sindoor': 1,
+  'Haldi Sabut': 1,
+  'Rudraksh Mala': 1
+};
+
 export default function CustomizeKit() {
-  const [selected, setSelected] = useState(() => {
-    const initial = {};
-    ITEMS.forEach(([name]) => {
-      initial[name] = 0;
-    });
-    return initial;
-  });
+  const [selected, setSelected] = useState(() => ({ ...DEFAULT_QTY }));
 
   const total = useMemo(() => {
     return ITEMS.reduce((sum, [name, price]) => {
@@ -88,12 +92,11 @@ export default function CustomizeKit() {
         </div>
 
         <p className="custom-kit-sub">
-          Choose the items you want. Add or remove items according to your preference.
-          Your final customized kit must be exactly <b>₹1,299</b>.
+          Your premium kit includes these 15 selected pooja essentials. You can add or remove items according to your preference, but the final customized kit must be exactly <b>₹1,299</b>.
         </p>
 
         <div className="kit-price-card">
-          <span>FIXED KIT VALUE</span>
+          <span>PREMIUM 15-ITEM KIT</span>
           <strong>₹1,299</strong>
           <div className="kit-progress">
             <i style={{ width: `${Math.min(100, (total / PRICE) * 100)}%` }} />
