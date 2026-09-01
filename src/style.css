@@ -54,3 +54,24 @@ nav a{font-size:14px!important}
   .product-info h3{font-size:11px!important}
   .product-info strong{font-size:15px!important}
 }
+/* BIG PREMIUM TYPOGRAPHY + IMAGES */
+body{font-size:16px}
+nav a{font-size:14px!important}
+.category div{width:140px;height:140px}
+.category b{font-size:13px!important}
+.product-image{height:240px}
+.product-info h3{font-size:13px!important}
+.product-info strong{font-size:17px!important}
+.add{font-size:12px!important;height:32px}
+
+@media(max-width:700px){
+  .category div{width:96px;height:96px}
+  .product-image{height:200px}
+  .product-info h3{font-size:12px!important}
+  .product-info strong{font-size:16px!important}
+  .add{font-size:12px!important;height:32px}
+}
+@media(max-width:390px){
+  .category div{width:84px;height:84px}
+  .product-image{height:180px}
+}
