@@ -48,4 +48,3 @@ if (!html.includes('/font-scale.js')) {
   html = html.replace('</head>', '  <script src="/font-scale.js"></script>\n</head>');
   fs.writeFileSync(indexPath, html);
 }
-`;
