@@ -11,6 +11,7 @@ function Admin() {
   const [products, setProducts] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState('');
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('');
 
   // Check user auth and role
   useEffect(() => {
@@ -108,12 +109,9 @@ function Admin() {
         .getPublicUrl(filePath);
 
       console.log('Image uploaded successfully:', publicUrl);
+      setUploadedImageUrl(publicUrl);
       setUploadError('');
       
-      // Reset input
-      e.target.value = '';
-      
-      return publicUrl;
     } catch (error) {
       console.error('Upload failed:', error);
       setUploadError(`Upload failed: ${error.message}`);
@@ -125,16 +123,20 @@ function Admin() {
   // Add new product
   const handleAddProduct = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    
+    if (!uploadedImageUrl) {
+      setUploadError('Please upload an image first');
+      return;
+    }
     
     try {
       const { error } = await supabase
         .from('products')
         .insert([{
-          name: formData.get('name'),
-          price: parseFloat(formData.get('price')),
-          image: formData.get('image'),
-          description: formData.get('description'),
+          name: e.target.name.value,
+          price: parseFloat(e.target.price.value),
+          image: uploadedImageUrl,
+          description: e.target.description.value,
           created_at: new Date()
         }]);
 
@@ -142,6 +144,7 @@ function Admin() {
 
       setStatus('Product added successfully');
       e.target.reset();
+      setUploadedImageUrl('');
       
       // Reload products
       const { data } = await supabase.from('products').select('*');
@@ -281,12 +284,15 @@ function Admin() {
                 accept="image/*"
                 onChange={handleImageUpload}
                 disabled={uploading}
+                required
               />
               {uploading && <span className="uploading">Uploading...</span>}
-              <input 
-                type="hidden"
-                name="image"
-              />
+              {uploadedImageUrl && (
+                <div className="image-preview">
+                  <p>✓ Image uploaded successfully</p>
+                  <img src={uploadedImageUrl} alt="Preview" style={{ maxWidth: '200px', marginTop: '10px' }} />
+                </div>
+              )}
             </div>
 
             <div className="form-group">
@@ -301,7 +307,7 @@ function Admin() {
             <button 
               type="submit" 
               className="submit-btn"
-              disabled={uploading}
+              disabled={uploading || !uploadedImageUrl}
             >
               Add Product
             </button>
