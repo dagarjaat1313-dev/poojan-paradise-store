@@ -1,0 +1,5 @@
+/* Keep the home page responsive and prevent below-the-fold product cards from consuming layout/paint work. */
+.product-card{content-visibility:auto;contain-intrinsic-size:360px 320px;}
+.product-card img{content-visibility:auto;}
+.gallery-slide:not(.show){visibility:hidden;pointer-events:none;}
+@media(max-width:700px){.product-card{contain-intrinsic-size:180px 270px}.product-image{contain:layout paint;}}
