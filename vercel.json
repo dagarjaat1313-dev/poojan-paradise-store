@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/products/peela%20kapda.png",
-      "destination": "/products/peela-kapda.jpg"
-    },
-    {
       "source": "/product/:path*",
       "destination": "/index.html"
     },
