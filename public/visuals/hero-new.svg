@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1790" height="878" viewBox="0 0 1790 878"><image x="0" y="0" width="1790" height="878" preserveAspectRatio="xMidYMid slice" href="https://plain-apac-prod-public.komododecks.com/202609/06/FdqS848cNUjuemA1XN0k/image.jpg" xlink:href="https://plain-apac-prod-public.komododecks.com/202609/06/FdqS848cNUjuemA1XN0k/image.jpg"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1790" height="878" viewBox="0 0 1790 878">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8e8"/><stop offset=".5" stop-color="#f6dfaa"/><stop offset="1" stop-color="#7b1113"/></linearGradient>
+ <radialGradient id="glow"><stop offset="0" stop-color="#fff6b0"/><stop offset="1" stop-color="#c99a38" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1790" height="878" fill="url(#bg)"/>
+<circle cx="1480" cy="300" r="330" fill="url(#glow)"/>
+<circle cx="1490" cy="305" r="170" fill="#fff7cf" opacity=".55"/>
+<g fill="#7b1113" opacity=".95" font-family="Georgia,serif" text-anchor="middle">
+ <text x="895" y="270" font-size="42" letter-spacing="9">POOJAN PARADISE</text>
+ <text x="895" y="365" font-size="76" font-weight="700">Pure Pooja Essentials</text>
+ <text x="895" y="430" font-size="30" letter-spacing="5">SHUDDH SAMAGRI • SHRESHTH SEVA</text>
+</g>
+<g transform="translate(1390 515)">
+ <path d="M-130 90 Q0 135 130 90 L105 145 Q0 180 -105 145Z" fill="#a47718"/>
+ <path d="M-92 93 Q0 118 92 93 Q70 150 0 158 Q-70 150 -92 93Z" fill="#7b1113"/>
+ <path d="M0 85 C-32 42 -8 7 0 -34 C18 10 39 42 0 85Z" fill="#f3a11a"/>
+ <path d="M0 58 C-9 37 -3 13 0 -3 C8 20 12 39 0 58Z" fill="#fff1a8"/>
+</g>
+<g fill="#c99a38" opacity=".8"><circle cx="180" cy="170" r="7"/><circle cx="260" cy="230" r="5"/><circle cx="340" cy="145" r="6"/><circle cx="1540" cy="620" r="6"/><circle cx="1640" cy="560" r="4"/></g>
+</svg>
