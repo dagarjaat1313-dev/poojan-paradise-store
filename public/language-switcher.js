@@ -36,4 +36,5 @@
   function add(){var h=document.querySelector('header');if(!h)return;var a=h.querySelector('.header-actions');if(!a||a.querySelector('.pp-lang'))return;var b=document.createElement('button');b.className='pp-lang';b.type='button';b.innerHTML='<span>🌐</span> <b>'+(lang==='hi'?'EN':'हिंदी')+'</b>';b.title=lang==='hi'?'Switch to English':'हिंदी में बदलें';b.onclick=function(){lang=lang==='hi'?'en':'hi';localStorage.setItem('pp-language',lang);translate(document.body,lang);b.innerHTML='<span>🌐</span> <b>'+(lang==='hi'?'EN':'हिंदी')+'</b>';b.title=lang==='hi'?'Switch to English':'हिंदी में बदलें'};a.appendChild(b);translate(document.body,lang)}
   function boot(){add();var o=new MutationObserver(function(){add()});o.observe(document.body,{childList:true,subtree:true});setTimeout(function(){o.disconnect()},10000)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+  var ls=document.createElement('script');ls.src='/cow-ghee-image-fix.js?v=20260906';document.head.appendChild(ls);
 })();
