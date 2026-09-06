@@ -1,20 +1,10 @@
 {
   "rewrites": [
-    {
-      "source": "/product/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/customize-kit",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/loyalty-program",
-      "destination": "/index.html"
-    }
+    {"source":"/product/:path*","destination":"/index.html"},
+    {"source":"/about","destination":"/index.html"},
+    {"source":"/customize-kit","destination":"/index.html"},
+    {"source":"/loyalty-program","destination":"/index.html"},
+    {"source":"/login","destination":"/auth.html"},
+    {"source":"/signup","destination":"/auth.html"}
   ]
 }
