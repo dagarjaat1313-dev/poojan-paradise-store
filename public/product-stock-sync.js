@@ -8,3 +8,4 @@ function apply(){if(applying)return;applying=true;try{addLogin();document.queryS
 function scheduleApply(){if(scheduled)return;scheduled=true;setTimeout(()=>{scheduled=false;apply()},0)}
 async function load(){try{const r=await fetch(URL,{headers:{apikey:KEY,Authorization:'Bearer '+KEY}});if(!r.ok)return;const rows=await r.json();db={};rows.forEach(x=>db[x.name]=x);apply();new MutationObserver(scheduleApply).observe(document.body,{childList:true,subtree:true})}catch(e){console.warn('Product stock sync unavailable',e)}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();})();
+// deploy trigger: freeze-loop guard verified
