@@ -4,7 +4,7 @@
     {"source":"/about","destination":"/index.html"},
     {"source":"/customize-kit","destination":"/index.html"},
     {"source":"/loyalty-program","destination":"/index.html"},
-    {"source":"/login","destination":"/auth.html"},
-    {"source":"/signup","destination":"/auth.html"}
+    {"source":"/login","destination":"/login.html"},
+    {"source":"/signup","destination":"/login.html"}
   ]
 }
