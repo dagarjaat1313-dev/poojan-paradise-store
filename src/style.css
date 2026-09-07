@@ -75,3 +75,7 @@ nav a{font-size:14px!important}
   .category div{width:84px;height:84px}
   .product-image{height:180px}
 }
+
+/* Hero banner crop fix: keep the Poojan Paradise logo fully visible */
+.hero-img{object-position:46% center}
+@media(max-width:700px){.hero-img{object-position:43% center}}
