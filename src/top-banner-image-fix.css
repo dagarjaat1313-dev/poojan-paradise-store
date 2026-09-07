@@ -1,0 +1,11 @@
+/* Top banner image override — Poojan Paradise */
+.hero .hero-img {
+  content: url('https://plain-apac-prod-public.komododecks.com/202609/07/sM9vwVq10lB1bIxALQtu/image.jpg');
+  object-fit: cover;
+  object-position: center center;
+}
+@media (max-width: 700px) {
+  .hero .hero-img {
+    object-position: center center;
+  }
+}
