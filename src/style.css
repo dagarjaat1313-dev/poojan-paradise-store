@@ -150,3 +150,8 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 /* Production hero: preserve full banner frame */
 .hero{height:auto!important;min-height:0!important;aspect-ratio:1440/500!important;overflow:hidden}.hero-img{width:100%!important;height:100%!important;object-fit:fill!important;display:block!important}
 @media(max-width:700px){.hero{height:auto!important;min-height:0!important;aspect-ratio:1440/500!important}.hero-img{width:100%!important;height:100%!important;object-fit:fill!important;display:block!important}}
+
+/* Hero banner: show the complete source image without cropping */
+.hero{height:auto;min-height:0;aspect-ratio:1440/500}
+.hero-img{object-fit:fill!important}
+@media(max-width:700px){.hero{height:auto;min-height:0;aspect-ratio:1440/500}.hero-img{object-fit:fill!important}}
