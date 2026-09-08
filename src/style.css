@@ -196,3 +196,43 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
   .hero{width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important}
   .hero .hero-img,.hero-img{width:100%!important;height:auto!important;object-fit:contain!important}
 }
+
+/* FINAL HERO ARTWORK FIX — crop only the built-in side padding of the source artwork */
+.hero{
+  width:100%!important;
+  max-width:none!important;
+  height:clamp(300px,34.72vw,500px)!important;
+  min-height:300px!important;
+  overflow:hidden!important;
+  position:relative!important;
+  background:#40140d!important;
+}
+.hero .hero-img{
+  position:absolute!important;
+  top:0!important;
+  left:50%!important;
+  width:100%!important;
+  height:100%!important;
+  transform:translateX(-50%)!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  z-index:1!important;
+}
+/* The supplied artwork has large built-in side margins. Enlarge it on phones so the actual
+   Poojan Paradise artwork fills the screen instead of showing those margins. */
+@media(max-width:700px){
+  .hero{
+    height:300px!important;
+    min-height:300px!important;
+  }
+  .hero .hero-img{
+    width:188%!important;
+    height:100%!important;
+    max-width:none!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    object-fit:fill!important;
+  }
+}
+.hero-shade{position:absolute!important;inset:0!important;z-index:2!important}
+.hero-cta{position:absolute!important;z-index:3!important}
