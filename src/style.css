@@ -71,8 +71,50 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 @media (max-width:700px){ .brand small { font-size: 12px !important; } }
 
 
-/* HERO FULL-FRAME FIX v2: use the image's natural aspect ratio so the complete banner is visible */
-.hero{height:auto!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;background:#40140d}
-.hero .hero-img,.hero-img{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
-.hero-shade,.hero-cta{position:absolute!important}
-@media(max-width:700px){.hero{height:auto!important;min-height:0!important;aspect-ratio:auto!important}.hero .hero-img,.hero-img{width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important}}
+/* HERO FULL-FRAME FIX v3: full image + filled frame background, no empty brown bands */
+.hero{
+  height:min(500px,40vw)!important;
+  min-height:360px!important;
+  max-width:1440px;
+  margin:auto;
+  position:relative!important;
+  overflow:hidden!important;
+  background:#40140d;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-24px;
+  background-image:url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k");
+  background-size:cover;
+  background-position:center;
+  filter:blur(22px);
+  transform:scale(1.06);
+  opacity:.95;
+  z-index:0;
+}
+.hero .hero-img,.hero-img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  z-index:1!important;
+}
+.hero-shade{z-index:2!important}
+.hero-cta{z-index:3!important}
+@media(max-width:700px){
+  .hero{
+    height:330px!important;
+    min-height:330px!important;
+    aspect-ratio:auto!important;
+  }
+  .hero .hero-img,.hero-img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+}
