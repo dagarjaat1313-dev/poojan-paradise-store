@@ -3,3 +3,9 @@
 /* FINAL NAVIGATION SIZE OVERRIDE */
 header nav a, nav a { font-size: 20px !important; font-weight: 700 !important; }
 @media (max-width:700px){ header nav a, nav a { font-size: 24px !important; font-weight: 700 !important; padding: 10px 18px !important; line-height: 30px !important; } }
+
+
+/* FINAL BRAND SIZE OVERRIDE */
+.brand > div:last-child > b { font-size: 28px !important; }
+.brand em { font-size: 19px !important; }
+@media (max-width:700px){ .brand > div:last-child > b { font-size: 24px !important; } .brand em { font-size: 17px !important; } }
