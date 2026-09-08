@@ -1,14 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-// Supabase now commonly provides a Publishable Key. Keep anon-key support too.
-const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Public Supabase frontend configuration.
+// The Publishable Key is intended for use in browser applications.
+const supabaseUrl = 'https://tfqndmgwjuyjegskgbbz.supabase.co';
+const supabaseKey = 'sb_publishable_yeiDgR3KaQV2CqevqYQVVQ_rvmfacbJ';
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error('Supabase configuration is missing. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY (or VITE_SUPABASE_ANON_KEY) in Vercel Environment Variables, then redeploy.');
-}
-
-export const supabase = createClient(
-  supabaseUrl || 'https://placeholder.supabase.co',
-  supabaseKey || 'placeholder-anon-key'
-);
+export const supabase = createClient(supabaseUrl, supabaseKey);
