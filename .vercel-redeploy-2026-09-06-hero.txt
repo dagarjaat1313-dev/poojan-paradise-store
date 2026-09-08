@@ -1,1 +1,1 @@
-Force Vercel Git deployment for hero banner fix. Commit 55d4c2fd5f326b692296b39a98cc4a7f610cc66f.
+Force Vercel production deployment for final hero full-frame repair. 2026-09-08.
