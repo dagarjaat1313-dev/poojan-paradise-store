@@ -1,0 +1,43 @@
+name: Fix hero banner framing
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  fix-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fix hero banner CSS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('src/style.css')
+          s = p.read_text()
+          old = ".hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}"
+          new = ".hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;object-position:center}"
+          if old in s:
+              s = s.replace(old, new, 1)
+          else:
+              print('hero rule already changed or not found')
+          # Keep the full original banner visible on all screen sizes; do not crop it.
+          s += "\n/* Hero banner: show the complete source image without cropping */\n.hero{height:auto;min-height:0;aspect-ratio:1440/500}\n.hero-img{object-fit:fill!important}\n@media(max-width:700px){.hero{height:auto;min-height:0;aspect-ratio:1440/500}.hero-img{object-fit:fill!important}}\n"
+          p.write_text(s)
+          PY
+
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/style.css
+          git diff --cached --quiet && exit 0
+          git commit -m "Fix top banner framing without crop"
+          git push
