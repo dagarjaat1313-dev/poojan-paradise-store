@@ -35,3 +35,27 @@ header nav a, nav a { font-size: 40px !important; padding: 50px 0 45px !importan
   nav { gap: 0 !important; }
   header nav a, nav a { font-size: 40px !important; padding: 22px 32px !important; line-height: 54px !important; }
 }
+
+
+/* BALANCED TOP HEADER SIZE */
+header { height: 100px !important; padding-left: clamp(18px,4vw,70px) !important; padding-right: clamp(18px,4vw,70px) !important; gap: 28px !important; }
+.logo-mark { width: 72px !important; height: 72px !important; }
+.logo-mark span { font-size: 28px !important; line-height: 22px !important; }
+.logo-mark b { font-size: 11px !important; }
+.brand > div:last-child > b { font-size: 26px !important; }
+.brand em { font-size: 18px !important; }
+.brand small { font-size: 10px !important; }
+nav { gap: 30px !important; }
+header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !important; }
+.header-actions { gap: 7px !important; }
+.header-actions button { width: 40px !important; height: 40px !important; font-size: 22px !important; }
+@media (max-width:700px){
+  header { height: 136px !important; padding: 8px 14px 0 !important; grid-template-rows: 76px 60px !important; gap: 0 8px !important; }
+  .logo-mark { width: 64px !important; height: 64px !important; flex-basis: 64px !important; }
+  .logo-mark span { font-size: 25px !important; }
+  .brand > div:last-child > b { font-size: 22px !important; }
+  .brand em { font-size: 16px !important; }
+  .brand small { font-size: 9px !important; }
+  .header-actions button { width: 42px !important; height: 42px !important; font-size: 24px !important; }
+  header nav a, nav a { font-size: 22px !important; padding: 12px 18px !important; line-height: 30px !important; }
+}
