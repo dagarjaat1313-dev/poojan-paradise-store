@@ -22,14 +22,10 @@ jobs:
           from pathlib import Path
           p = Path('src/style.css')
           s = p.read_text()
-          old = ".hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}"
-          new = ".hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;object-position:center}"
-          if old in s:
-              s = s.replace(old, new, 1)
-          else:
-              print('hero rule already changed or not found')
-          # Keep the full original banner visible on all screen sizes; do not crop it.
-          s += "\n/* Hero banner: show the complete source image without cropping */\n.hero{height:auto;min-height:0;aspect-ratio:1440/500}\n.hero-img{object-fit:fill!important}\n@media(max-width:700px){.hero{height:auto;min-height:0;aspect-ratio:1440/500}.hero-img{object-fit:fill!important}}\n"
+          marker = '/* FINAL HERO FRAME FIX */'
+          if marker in s:
+              raise SystemExit(0)
+          s += '''\n\n/* FINAL HERO FRAME FIX */\n.hero{height:min(500px,40vw)!important;min-height:0!important;max-width:1440px;margin:auto;position:relative;overflow:hidden;background-image:url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k");background-size:cover;background-position:center}\n.hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;display:block!important}\n.hero-shade{z-index:1}.hero-cta{z-index:2}\n@media(max-width:700px){.hero{height:calc(100vw * 500 / 1440)!important;min-height:0!important;background-size:cover}.hero-img{object-fit:contain!important}}\n'''
           p.write_text(s)
           PY
 
