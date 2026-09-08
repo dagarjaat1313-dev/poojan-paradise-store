@@ -236,3 +236,42 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 }
 .hero-shade{position:absolute!important;inset:0!important;z-index:2!important}
 .hero-cta{position:absolute!important;z-index:3!important}
+
+/* HERO FINAL: full artwork visible, side space filled by the same banner image */
+.hero{
+  width:100%!important;
+  max-width:none!important;
+  height:clamp(220px,34.72vw,500px)!important;
+  min-height:0!important;
+  position:relative!important;
+  overflow:hidden!important;
+  background:#40140d url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k") center/cover no-repeat!important;
+}
+.hero .hero-img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  transform:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block!important;
+  z-index:1!important;
+}
+.hero-shade{position:absolute!important;inset:0!important;z-index:2!important}
+.hero-cta{position:absolute!important;z-index:3!important}
+@media(max-width:700px){
+  .hero{
+    width:100%!important;
+    height:calc(100vw * 500 / 1440)!important;
+    min-height:0!important;
+    background-size:cover!important;
+    background-position:center!important;
+  }
+  .hero .hero-img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+}
