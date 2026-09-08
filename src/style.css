@@ -9,3 +9,7 @@
 @media(max-width:700px){.search-overlay{padding:78px 10px 18px}.search-head input{font-size:16px}.search-results{max-height:72vh}.search-result img{width:52px;height:52px}.search-result b{font-size:15px}}
 .hero{height:auto!important;min-height:0!important;aspect-ratio:1440/500!important;overflow:hidden}.hero-img{width:100%!important;height:100%!important;object-fit:fill!important;display:block!important}
 @media(max-width:700px){.hero{height:auto!important;min-height:0!important;aspect-ratio:1440/500!important}.hero-img{width:100%!important;height:100%!important;object-fit:fill!important;display:block!important}}
+/* Hero banner: show the complete source image without cropping */
+.hero{height:auto;min-height:0;aspect-ratio:1440/500}
+.hero-img{object-fit:fill!important}
+@media(max-width:700px){.hero{height:auto;min-height:0;aspect-ratio:1440/500}.hero-img{object-fit:fill!important}}
