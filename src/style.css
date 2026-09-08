@@ -69,3 +69,9 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 /* BRAND TAGLINE SIZE */
 .brand small { font-size: 14px !important; }
 @media (max-width:700px){ .brand small { font-size: 12px !important; } }
+
+
+/* HERO FULL-FRAME FIX: preserve the complete 3:2 banner without cropping */
+.hero{height:auto!important;min-height:0!important;aspect-ratio:3/2!important;overflow:hidden!important;background:#40140d}
+.hero .hero-img,.hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+@media(max-width:700px){.hero{height:auto!important;min-height:0!important;aspect-ratio:3/2!important}.hero .hero-img,.hero-img{object-fit:contain!important;object-position:center!important}}
