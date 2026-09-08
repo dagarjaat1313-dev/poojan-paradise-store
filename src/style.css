@@ -161,4 +161,8 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 .hero{height:min(500px,40vw)!important;min-height:0!important;max-width:1440px;margin:auto;position:relative;overflow:hidden;background-image:url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k");background-size:cover;background-position:center}
 .hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;display:block!important}
 .hero-shade{z-index:1}.hero-cta{z-index:2}
-@media(max-width:700px){.hero{height:calc(100vw * 500 / 1440)!important;min-height:0!important;background-size:cover}.hero-img{object-fit:contain!important}}
+@media(max-width:700px){.hero{height:calc(100vw * 500 / 1440)!important;min-height:0!important;background-size:cover}.hero-img{object-fit:contain!important}}/* FINAL TOP BANNER SIZE — full frame, no crop */
+.hero{height:clamp(280px,34.72vw,500px)!important;min-height:280px!important;width:100%!important;max-width:1440px;margin:auto;position:relative;overflow:hidden;background:#40140d url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k") center/cover no-repeat}
+.hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center!important;display:block!important;z-index:1!important}
+.hero-shade{z-index:2!important}.hero-cta{z-index:3!important}
+@media(max-width:700px){.hero{height:280px!important;min-height:280px!important}.hero-img{object-fit:contain!important;object-position:center!important}}
