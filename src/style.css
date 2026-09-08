@@ -155,3 +155,10 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 .hero{height:auto;min-height:0;aspect-ratio:1440/500}
 .hero-img{object-fit:fill!important}
 @media(max-width:700px){.hero{height:auto;min-height:0;aspect-ratio:1440/500}.hero-img{object-fit:fill!important}}
+
+
+/* FINAL HERO FRAME FIX */
+.hero{height:min(500px,40vw)!important;min-height:0!important;max-width:1440px;margin:auto;position:relative;overflow:hidden;background-image:url("https://kommodo.ai/i/FdqS848cNUjuemA1XN0k");background-size:cover;background-position:center}
+.hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;display:block!important}
+.hero-shade{z-index:1}.hero-cta{z-index:2}
+@media(max-width:700px){.hero{height:calc(100vw * 500 / 1440)!important;min-height:0!important;background-size:cover}.hero-img{object-fit:contain!important}}
