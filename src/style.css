@@ -166,3 +166,33 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
 .hero-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center!important;display:block!important;z-index:1!important}
 .hero-shade{z-index:2!important}.hero-cta{z-index:3!important}
 @media(max-width:700px){.hero{height:280px!important;min-height:280px!important}.hero-img{object-fit:contain!important;object-position:center!important}}
+
+/* FINAL MOBILE + DESKTOP HERO — full image width, no brown side bands, no crop */
+.hero{
+  width:100%!important;
+  max-width:1440px!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  position:relative!important;
+  background:transparent!important;
+}
+.hero .hero-img,.hero-img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  z-index:1!important;
+}
+.hero::before{display:none!important}
+.hero-shade{position:absolute!important;inset:0!important;z-index:2!important}
+.hero-cta{z-index:3!important}
+@media(max-width:700px){
+  .hero{width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important}
+  .hero .hero-img,.hero-img{width:100%!important;height:auto!important;object-fit:contain!important}
+}
