@@ -275,3 +275,47 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
     object-fit:contain!important;
   }
 }
+
+
+/* HERO SIDES FIX — keep the complete banner artwork in front and fill the frame behind it */
+.hero{
+  width:100%!important;
+  max-width:none!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1440/500!important;
+  position:relative!important;
+  overflow:hidden!important;
+  background:#40140d!important;
+}
+.hero .hero-bg{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:blur(0)!important;
+  transform:scale(1.01)!important;
+  z-index:0!important;
+}
+.hero .hero-img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  display:block!important;
+  z-index:1!important;
+}
+.hero .hero-shade{z-index:2!important}
+.hero .hero-cta{z-index:3!important}
+@media(max-width:700px){
+  .hero{width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:1440/500!important}
+  .hero .hero-bg{width:100%!important;height:100%!important;object-fit:cover!important;transform:scale(1.01)!important}
+  .hero .hero-img{width:100%!important;height:100%!important;object-fit:contain!important}
+}
