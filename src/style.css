@@ -319,3 +319,43 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
   .hero .hero-bg{width:100%!important;height:100%!important;object-fit:cover!important;transform:scale(1.01)!important}
   .hero .hero-img{width:100%!important;height:100%!important;object-fit:contain!important}
 }
+
+
+/* TOP BANNER DEFINITIVE FIX — use supplied banner at its natural ratio; never crop or add side bands */
+.hero{
+  width:100%!important;
+  max-width:none!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  position:relative!important;
+  background:none!important;
+}
+.hero .hero-img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  content:normal!important;
+  z-index:1!important;
+}
+.hero .hero-shade{
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+}
+.hero .hero-cta{
+  position:absolute!important;
+  z-index:3!important;
+}
+.hero .hero-bg{display:none!important}
+@media(max-width:700px){
+  .hero{width:100%!important;height:auto!important;min-height:0!important}
+  .hero .hero-img{width:100%!important;height:auto!important;object-fit:contain!important}
+}
