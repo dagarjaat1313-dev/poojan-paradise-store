@@ -1,0 +1,33 @@
+name: Fix Cow Ghee Batti image
+on:
+  push:
+    paths:
+      - 'public/products/cow-ghee-batti-new.svg'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace product image reference
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/main.jsx')
+          s=p.read_text()
+          old='/products/cow ghee batti 2.png'
+          new='/products/cow-ghee-batti-new.svg'
+          if old in s:
+              p.write_text(s.replace(old,new))
+          else:
+              print('Old image path not found; leaving source unchanged')
+          PY
+      - name: Commit source change and remove workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/main.jsx
+          git rm .github/workflows/fix-cow-ghee-image.yml
+          git diff --cached --quiet || git commit -m 'Replace Cow Ghee Batti product image'
+          git push
