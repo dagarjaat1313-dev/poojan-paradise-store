@@ -1,12 +1,11 @@
 import React, { useMemo, useState } from 'react';
 
-// Premium 15-item Poojan Paradise kit.
+// Premium 14-item Poojan Paradise kit.
 // Default contents total exactly ₹1,299.
 const ITEMS = [
   ['Peela Kapda', 75],
   ['Lal Kapda', 53],
   ['Pooja Ghee', 76],
-  ['Gobar Cups & Diya', 95],
   ['Bheem Seni Kapoor', 261],
   ['Honey', 66],
   ['Dhoop Batti', 44],
@@ -41,7 +40,7 @@ export default function CustomizeKit() {
       <main className="custom-kit">
         <a className="back-link" href="/#kit">← Back to Poojan Kit</a>
         <div className="orn-title"><span>⌁</span><h1>Customize Your Poojan Kit</h1><span>⌁</span></div>
-        <p className="custom-kit-sub">Your ₹1,299 kit starts with these <b>15 selected pooja essentials</b>. Remove, add or adjust quantities as you like. To purchase the kit, your selected contents must total <b>exactly ₹1,299</b>.</p>
+        <p className="custom-kit-sub">Your ₹1,299 kit starts with these <b>14 selected pooja essentials</b>. Remove, add or adjust quantities as you like. To purchase the kit, your selected contents must total <b>exactly ₹1,299</b>.</p>
         <div className="kit-price-card">
           <span>FIXED POOJAN KIT VALUE</span><strong>₹1,299</strong>
           <div className="kit-progress"><i style={{ width: `${Math.min(100, (total / PRICE) * 100)}%` }} /></div>
