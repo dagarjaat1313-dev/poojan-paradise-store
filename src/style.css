@@ -944,3 +944,5 @@ header > .header-actions::after{
   }
   header > .site-menu-button span{width:28px!important}
 }
+
+/* Production redeploy trigger — header hamburger fix */
