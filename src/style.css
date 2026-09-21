@@ -442,3 +442,133 @@ header{position:relative!important;display:flex!important;align-items:center!imp
   .header-actions{margin-left:auto!important}
   .menu-panel{top:144px!important}
 }
+
+
+/* CLEAN HEADER FINAL — hamburger is the primary navigation */
+header{
+  height:92px!important;
+  padding:0 clamp(14px,3vw,44px)!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:14px!important;
+  position:sticky!important;
+  top:0!important;
+  z-index:100!important;
+}
+header .menu-toggle{
+  order:0!important;
+  flex:0 0 48px!important;
+  width:48px!important;
+  height:48px!important;
+  padding:0!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:5px!important;
+  border:1px solid #d7bd8d!important;
+  border-radius:9px!important;
+  background:#fff8e9!important;
+}
+header .menu-toggle span{
+  width:27px!important;
+  height:3px!important;
+  display:block!important;
+  background:#7a1f1f!important;
+  border-radius:3px!important;
+}
+header .brand{
+  order:1!important;
+  min-width:0!important;
+  flex:0 1 auto!important;
+  gap:8px!important;
+}
+header .logo-mark{
+  width:58px!important;
+  height:58px!important;
+  flex:0 0 58px!important;
+}
+header .logo-mark span{font-size:24px!important;line-height:20px!important}
+header .logo-mark b{font-size:10px!important}
+header .brand>div:last-child>b{font-size:24px!important}
+header .brand em{font-size:15px!important}
+header .brand small{font-size:9px!important}
+header .desktop-nav{display:none!important}
+header .header-actions{
+  order:2!important;
+  margin-left:auto!important;
+  gap:7px!important;
+}
+header .header-actions button{
+  width:44px!important;
+  height:44px!important;
+  font-size:25px!important;
+}
+header .menu-drawer{
+  position:fixed!important;
+  inset:0!important;
+  z-index:9998!important;
+  background:rgba(24,7,4,.45)!important;
+}
+header~.menu-drawer .menu-panel,
+.menu-drawer .menu-panel{
+  position:absolute!important;
+  top:100px!important;
+  left:14px!important;
+  width:min(340px,88vw)!important;
+  padding:9px!important;
+  background:#fffdf8!important;
+  border:1px solid #dfc89f!important;
+  border-radius:14px!important;
+  box-shadow:0 18px 45px rgba(22,5,0,.22)!important;
+}
+.menu-drawer .menu-panel a{
+  display:block!important;
+  padding:16px 18px!important;
+  font:700 22px/1.25 'DM Sans',sans-serif!important;
+  color:#6f100b!important;
+  text-decoration:none!important;
+  border-bottom:1px solid #eadbc5!important;
+}
+.menu-drawer .menu-panel a:last-child{border-bottom:0!important}
+.topbar{font-size:12px!important;height:28px!important;line-height:28px!important}
+
+@media(max-width:700px){
+  header{
+    height:76px!important;
+    padding:0 10px!important;
+    gap:8px!important;
+  }
+  header .menu-toggle{
+    flex-basis:46px!important;
+    width:46px!important;
+    height:46px!important;
+  }
+  header .menu-toggle span{width:25px!important}
+  header .logo-mark{
+    width:50px!important;
+    height:50px!important;
+    flex-basis:50px!important;
+  }
+  header .logo-mark span{font-size:21px!important}
+  header .brand{gap:6px!important}
+  header .brand>div:last-child>b{font-size:18px!important}
+  header .brand em{font-size:12px!important}
+  header .brand small{font-size:8px!important}
+  header .header-actions{gap:3px!important}
+  header .header-actions button{
+    width:42px!important;
+    height:42px!important;
+    font-size:23px!important;
+  }
+  .menu-drawer .menu-panel{
+    top:84px!important;
+    left:10px!important;
+    width:calc(100vw - 20px)!important;
+  }
+  .menu-drawer .menu-panel a{
+    font-size:22px!important;
+    padding:17px 18px!important;
+  }
+  .topbar{font-size:9px!important;height:26px!important;line-height:26px!important}
+}
