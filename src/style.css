@@ -727,3 +727,12 @@ header .header-actions button{
     padding:17px 18px!important;
   }
 }
+
+
+/* REMOVE ANY ACCIDENTAL RIGHT-SIDE HAMBURGER — keep only the left menu */
+header .header-actions .menu-toggle{display:none!important}
+header .header-actions::before,
+header .header-actions::after{content:none!important;display:none!important}
+header .desktop-nav,
+header nav.desktop-nav{display:none!important}
+header .menu-toggle{display:flex!important}
