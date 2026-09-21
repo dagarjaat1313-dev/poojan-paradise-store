@@ -821,3 +821,79 @@ header > .header-actions{order:2!important;margin-left:auto!important;}
   header > .left-menu-toggle{left:10px!important;width:46px!important;height:46px!important;flex-basis:46px!important;}
   header > .left-menu-toggle span{width:25px!important;}
 }
+
+
+/* FINAL TOP HEADER POLISH — slightly larger, one hamburger only on LEFT */
+header{
+  height:104px!important;
+  min-height:104px!important;
+  padding-left:88px!important;
+  padding-right:22px!important;
+  gap:18px!important;
+}
+header > .left-menu-toggle{
+  left:18px!important;
+  width:54px!important;
+  height:54px!important;
+  flex:0 0 54px!important;
+  display:flex!important;
+  z-index:99999!important;
+}
+header > .left-menu-toggle span{
+  width:30px!important;
+  height:3px!important;
+}
+header > .brand{gap:10px!important}
+header > .logo-mark{
+  width:66px!important;
+  height:66px!important;
+  flex-basis:66px!important;
+}
+header > .brand > div:last-child > b{font-size:28px!important}
+header > .brand em{font-size:18px!important}
+header > .brand small{font-size:10px!important}
+header > .header-actions{
+  margin-left:auto!important;
+  gap:8px!important;
+}
+header > .header-actions button{
+  width:48px!important;
+  height:48px!important;
+  font-size:28px!important;
+}
+/* Nothing in the right action area may create hamburger bars */
+header > .header-actions .menu-toggle,
+header > .header-actions .left-menu-toggle,
+header > .header-actions::before,
+header > .header-actions::after{display:none!important;content:none!important;}
+
+@media(max-width:700px){
+  header{
+    height:86px!important;
+    min-height:86px!important;
+    padding-left:72px!important;
+    padding-right:8px!important;
+    gap:9px!important;
+  }
+  header > .left-menu-toggle{
+    left:10px!important;
+    width:50px!important;
+    height:50px!important;
+    flex-basis:50px!important;
+  }
+  header > .left-menu-toggle span{width:28px!important}
+  header > .logo-mark{
+    width:56px!important;
+    height:56px!important;
+    flex-basis:56px!important;
+  }
+  header > .brand > div:last-child > b{font-size:20px!important}
+  header > .brand em{font-size:14px!important}
+  header > .brand small{font-size:8px!important}
+  header > .header-actions{gap:4px!important}
+  header > .header-actions button{
+    width:44px!important;
+    height:44px!important;
+    font-size:24px!important;
+  }
+}
