@@ -427,3 +427,18 @@ header nav a, nav a { font-size: 18px !important; padding: 36px 0 32px !importan
   .menu-panel{top:136px;left:12px;width:calc(100vw - 24px)}
   .menu-panel a{font-size:24px;padding:17px 20px}
 }
+
+/* FINAL HEADER MENU LAYOUT */
+header{position:relative!important;display:flex!important;align-items:center!important;gap:16px!important}
+.menu-toggle{order:0!important;margin:0!important}
+.brand{order:1!important;flex:0 1 auto!important}
+.desktop-nav{order:2!important;display:flex!important;align-items:center!important;gap:24px!important;margin-left:auto!important}
+.header-actions{order:3!important;margin-left:0!important}
+.menu-panel{top:calc(100px + 8px)!important;z-index:9999!important}
+@media(max-width:900px){
+  .desktop-nav{display:none!important}
+  header{gap:10px!important}
+  .brand{min-width:0!important}
+  .header-actions{margin-left:auto!important}
+  .menu-panel{top:144px!important}
+}
