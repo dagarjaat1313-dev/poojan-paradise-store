@@ -962,3 +962,40 @@ header > .header-actions::after{
     padding:20px 22px!important;
   }
 }
+
+
+/* PROFESSIONAL HEADER ICON SIZE */
+header > .header-actions{
+  gap:10px!important;
+}
+header > .header-actions button{
+  width:54px!important;
+  height:54px!important;
+  font-size:32px!important;
+  line-height:1!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+header > .header-actions .bag sup{
+  width:20px!important;
+  height:20px!important;
+  line-height:20px!important;
+  font-size:12px!important;
+  top:-3px!important;
+  right:-4px!important;
+}
+@media(max-width:700px){
+  header > .header-actions{gap:5px!important}
+  header > .header-actions button{
+    width:48px!important;
+    height:48px!important;
+    font-size:28px!important;
+  }
+  header > .header-actions .bag sup{
+    width:18px!important;
+    height:18px!important;
+    line-height:18px!important;
+    font-size:11px!important;
+  }
+}
