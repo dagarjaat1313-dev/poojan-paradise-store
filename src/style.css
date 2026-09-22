@@ -946,3 +946,19 @@ header > .header-actions::after{
 }
 
 /* Production redeploy trigger — header hamburger fix */
+
+
+/* FINAL MENU LINK SIZE — Home / Shop / Poojan Kit / About Us / Contact */
+.menu-drawer .menu-panel a{
+  font-size:28px!important;
+  line-height:1.25!important;
+  padding:20px 22px!important;
+  font-weight:700!important;
+}
+@media(max-width:700px){
+  .menu-drawer .menu-panel a{
+    font-size:27px!important;
+    line-height:1.25!important;
+    padding:20px 22px!important;
+  }
+}
