@@ -999,3 +999,27 @@ header > .header-actions .bag sup{
     font-size:11px!important;
   }
 }
+
+
+/* CENTER BRANDING — keep hamburger left and actions right */
+header{position:sticky!important;}
+header > .brand{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  margin:0!important;
+  z-index:2!important;
+  white-space:nowrap!important;
+}
+header > .site-menu-button{z-index:4!important;}
+header > .header-actions{position:absolute!important;right:clamp(12px,3vw,44px)!important;top:50%!important;transform:translateY(-50%)!important;z-index:4!important;margin-left:0!important;}
+@media(max-width:700px){
+  header > .brand{gap:5px!important;}
+  header > .brand .logo-mark{width:46px!important;height:46px!important;flex-basis:46px!important;}
+  header > .brand .logo-mark span{font-size:18px!important;}
+  header > .brand>div:last-child>b{font-size:15px!important;}
+  header > .brand em{font-size:10px!important;}
+  header > .brand small{font-size:6px!important;}
+  header > .header-actions{right:8px!important;}
+}
