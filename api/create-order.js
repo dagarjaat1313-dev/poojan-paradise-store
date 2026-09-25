@@ -21,7 +21,7 @@ export default async function handler(req,res){
       console.error('[razorpay] order creation failed',{status:response.status,error:data?.error?.code,description:data?.error?.description});
       return res.status(response.status).json({error:data?.error?.description||'Razorpay order creation failed'});
     }
-    return res.status(200).json({orderId:data.id,amount:data.amount,currency:data.currency});
+    return res.status(200).json({orderId:data.id,amount:data.amount,currency:data.currency,keyId});
   }catch(error){
     console.error('[razorpay] unexpected error',{message:error?.message});
     return res.status(500).json({error:'Unable to create Razorpay order. Please try again.'});
