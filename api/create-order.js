@@ -27,3 +27,4 @@ export default async function handler(req,res){
     return res.status(500).json({error:'Unable to create Razorpay order. Please try again.'});
   }
 }
+// Production redeploy trigger: Razorpay checkout fix is ready.
