@@ -1192,3 +1192,92 @@ header > .header-actions{position:absolute!important;right:clamp(12px,3vw,44px)!
   .about-page .founder-note .founder-subtitle{font-size:22px!important;line-height:1.7!important}
   .about-page .founder-note .founder-signoff{font-size:24px!important;line-height:1.85!important}
 }
+
+
+/* A NOTE FROM THE FOUNDER — LETTER PRESENTATION & HIGH READABILITY */
+.about-page .founder-note{
+  max-width:1120px!important;
+  padding:54px 64px!important;
+  margin:54px auto!important;
+  background:linear-gradient(150deg,#fffdf7 0%,#fff8e9 100%)!important;
+  border:1px solid #d7bd8d!important;
+  border-left:9px solid #7a1f1f!important;
+  border-radius:8px 18px 18px 8px!important;
+  box-shadow:0 16px 42px rgba(73,38,14,.12)!important;
+  font-size:29px!important;
+  line-height:1.95!important;
+}
+.about-page .founder-note .orn-title{
+  display:block!important;
+  text-align:left!important;
+  padding-bottom:22px!important;
+  margin-bottom:18px!important;
+  border-bottom:2px solid #dfc99f!important;
+}
+.about-page .founder-note .orn-title>span{display:none!important}
+.about-page .founder-note .orn-title h2{
+  font-size:48px!important;
+  line-height:1.2!important;
+  text-align:left!important;
+  letter-spacing:.1px!important;
+}
+.about-page .founder-note .founder-subtitle{
+  text-align:left!important;
+  font-size:25px!important;
+  margin:0 0 34px!important;
+  color:#9a702f!important;
+}
+.about-page .founder-note .founder-salutation{
+  font-size:29px!important;
+  font-weight:700!important;
+  color:#6f2922!important;
+  margin:0 0 22px!important;
+}
+.about-page .founder-note blockquote{
+  margin:20px 0 38px!important;
+  padding:28px 34px!important;
+  font-size:29px!important;
+  line-height:1.9!important;
+  background:#fff!important;
+  border-left:7px solid #c9a227!important;
+}
+.about-page .founder-note p{
+  font-size:29px!important;
+  line-height:1.95!important;
+  margin:0 0 25px!important;
+}
+.about-page .founder-note h3{
+  font-size:39px!important;
+  line-height:1.35!important;
+  margin:36px 0 16px!important;
+}
+.about-page .founder-note h4{
+  font-size:32px!important;
+  line-height:1.4!important;
+  margin:28px 0 12px!important;
+}
+.about-page .founder-note .founder-signoff{
+  margin-top:42px!important;
+  padding-top:28px!important;
+  border-top:2px solid #dfc99f!important;
+  font-size:29px!important;
+  line-height:1.9!important;
+}
+@media(max-width:700px){
+  .about-page .founder-note{
+    margin:30px auto!important;
+    padding:32px 23px!important;
+    border-left-width:6px!important;
+    font-size:25px!important;
+    line-height:1.9!important;
+  }
+  .about-page .founder-note .orn-title{padding-bottom:18px!important}
+  .about-page .founder-note .orn-title h2{font-size:36px!important;line-height:1.25!important}
+  .about-page .founder-note .founder-subtitle{font-size:21px!important;margin-bottom:27px!important}
+  .about-page .founder-note .founder-salutation{font-size:25px!important;line-height:1.7!important}
+  .about-page .founder-note p{font-size:25px!important;line-height:1.9!important;margin-bottom:21px!important}
+  .about-page .founder-note blockquote{font-size:24px!important;line-height:1.85!important;padding:21px 19px!important;margin:18px 0 30px!important}
+  .about-page .founder-note h3{font-size:31px!important;line-height:1.4!important;margin:30px 0 13px!important}
+  .about-page .founder-note h4{font-size:27px!important;line-height:1.45!important;margin:24px 0 10px!important}
+  .about-page .founder-note .founder-signoff{font-size:25px!important;line-height:1.85!important;margin-top:32px!important;padding-top:22px!important}
+}
