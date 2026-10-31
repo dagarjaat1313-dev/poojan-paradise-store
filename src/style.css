@@ -1107,3 +1107,23 @@ header > .header-actions{position:absolute!important;right:clamp(12px,3vw,44px)!
   .about-page section h3{font-size:22px!important;line-height:1.4!important;margin:20px 0 9px!important}
   .about-page section p{font-size:18px!important;line-height:1.8!important;margin-bottom:13px!important}
 }
+
+
+/* FOUNDER NOTE — distinct editorial section */
+.about-page .founder-note{
+  max-width:1000px!important;
+  margin:42px auto!important;
+  padding:40px 46px!important;
+  background:linear-gradient(135deg,#f8edda 0%,#fffaf0 58%,#fffdf8 100%)!important;
+  border:1px solid #d8bd87!important;
+  border-left:6px solid #7a1f1f!important;
+  box-shadow:0 12px 32px rgba(73,38,14,.09)!important;
+}
+.about-page .founder-note h2{color:#7a1f1f!important}
+.about-page .founder-note .founder-signoff{
+  margin-top:24px!important;
+  color:#805c2c!important;
+}
+@media(max-width:700px){
+  .about-page .founder-note{margin:28px auto!important;padding:27px 21px!important;border-left-width:5px!important}
+}
