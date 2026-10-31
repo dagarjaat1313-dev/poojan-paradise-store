@@ -1042,3 +1042,68 @@ header > .header-actions{position:absolute!important;right:clamp(12px,3vw,44px)!
  .about-page section h3{font-size:20px;line-height:1.5}
  .about-page section p{font-size:17px;line-height:1.85}
 }
+
+
+/* ABOUT US — premium editorial typography and spacing */
+.about-page{
+  max-width:1180px!important;
+  margin:0 auto!important;
+  padding:58px 32px 76px!important;
+  font-size:21px!important;
+  line-height:1.9!important;
+  color:#493326!important;
+}
+.about-page .orn-title{margin:0 auto 18px!important}
+.about-page .orn-title h1{
+  font-family:'Playfair Display',Georgia,serif!important;
+  font-size:46px!important;
+  line-height:1.2!important;
+  letter-spacing:.2px!important;
+  color:#7a1f1f!important;
+  text-align:center!important;
+}
+.about-page .about-subtitle{
+  max-width:850px!important;
+  margin:0 auto 42px!important;
+  text-align:center!important;
+  font-size:23px!important;
+  line-height:1.65!important;
+  color:#9a702f!important;
+  font-weight:600!important;
+}
+.about-page section{
+  max-width:1000px!important;
+  margin:28px auto!important;
+  padding:34px 42px!important;
+  background:linear-gradient(145deg,#fffefa,#fff9ef)!important;
+  border:1px solid #e6d3ad!important;
+  border-left:5px solid #b78a3e!important;
+  border-radius:14px!important;
+  box-shadow:0 8px 26px rgba(73,38,14,.06)!important;
+}
+.about-page section h2{
+  margin:0 0 18px!important;
+  font:700 34px/1.35 'Playfair Display',Georgia,serif!important;
+  color:#7a1f1f!important;
+}
+.about-page section h3{
+  margin:24px 0 10px!important;
+  font:700 27px/1.4 'Playfair Display',Georgia,serif!important;
+  color:#8b5e24!important;
+}
+.about-page section p{
+  margin:0 0 16px!important;
+  font-size:21px!important;
+  line-height:1.9!important;
+  color:#493326!important;
+}
+.about-page section p:last-child{margin-bottom:0!important}
+@media(max-width:700px){
+  .about-page{padding:36px 16px 50px!important;font-size:18px!important;line-height:1.8!important}
+  .about-page .orn-title h1{font-size:32px!important;line-height:1.25!important}
+  .about-page .about-subtitle{font-size:19px!important;margin:0 auto 28px!important;line-height:1.6!important}
+  .about-page section{margin:20px auto!important;padding:24px 20px!important;border-left-width:4px!important;border-radius:12px!important}
+  .about-page section h2{font-size:27px!important;line-height:1.35!important;margin-bottom:14px!important}
+  .about-page section h3{font-size:22px!important;line-height:1.4!important;margin:20px 0 9px!important}
+  .about-page section p{font-size:18px!important;line-height:1.8!important;margin-bottom:13px!important}
+}
