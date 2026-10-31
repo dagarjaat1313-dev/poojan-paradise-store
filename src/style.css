@@ -1281,3 +1281,44 @@ header > .header-actions{position:absolute!important;right:clamp(12px,3vw,44px)!
   .about-page .founder-note h4{font-size:27px!important;line-height:1.45!important;margin:24px 0 10px!important}
   .about-page .founder-note .founder-signoff{font-size:25px!important;line-height:1.85!important;margin-top:32px!important;padding-top:22px!important}
 }
+
+
+/* ULTRA-READABLE FOUNDER LETTER — strongest final size override */
+.about-page .founder-note{
+  font-size:36px!important;
+  line-height:2!important;
+  padding:64px 72px!important;
+}
+.about-page .founder-note p{
+  font-size:36px!important;
+  line-height:2!important;
+  margin-bottom:30px!important;
+}
+.about-page .founder-note .orn-title h2{font-size:54px!important;line-height:1.25!important}
+.about-page .founder-note .founder-subtitle{font-size:30px!important;line-height:1.7!important}
+.about-page .founder-note .founder-salutation{font-size:36px!important;line-height:1.7!important}
+.about-page .founder-note blockquote{font-size:35px!important;line-height:1.95!important;padding:32px 38px!important}
+.about-page .founder-note blockquote p{font-size:35px!important;line-height:1.95!important}
+.about-page .founder-note h3{font-size:44px!important;line-height:1.4!important}
+.about-page .founder-note h4{font-size:38px!important;line-height:1.45!important}
+.about-page .founder-note .founder-signoff{font-size:36px!important;line-height:1.9!important}
+@media(max-width:700px){
+  .about-page .founder-note{
+    padding:34px 22px!important;
+    font-size:32px!important;
+    line-height:1.95!important;
+  }
+  .about-page .founder-note p{
+    font-size:32px!important;
+    line-height:1.95!important;
+    margin-bottom:25px!important;
+  }
+  .about-page .founder-note .orn-title h2{font-size:42px!important;line-height:1.3!important}
+  .about-page .founder-note .founder-subtitle{font-size:26px!important;line-height:1.75!important}
+  .about-page .founder-note .founder-salutation{font-size:31px!important;line-height:1.75!important}
+  .about-page .founder-note blockquote{font-size:30px!important;line-height:1.9!important;padding:24px 19px!important}
+  .about-page .founder-note blockquote p{font-size:30px!important;line-height:1.9!important}
+  .about-page .founder-note h3{font-size:37px!important;line-height:1.4!important}
+  .about-page .founder-note h4{font-size:32px!important;line-height:1.45!important}
+  .about-page .founder-note .founder-signoff{font-size:31px!important;line-height:1.9!important}
+}
